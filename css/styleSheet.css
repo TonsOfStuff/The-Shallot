@@ -1,0 +1,708 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+
+a{
+    color: black;
+    text-decoration: none;
+}
+
+a:hover{
+    color: gray;
+}
+
+a:hover .sideArticleTitle{
+    text-decoration: underline;
+}
+
+main{
+    height: 80vw;
+    margin: 20px 10px 10px 10px;
+    display: grid;
+    grid-template-columns: 3fr 3fr 2fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 12px;
+    width: auto;
+    font-family: "IBM Plex Serif", sans-serif;
+}
+
+header{
+    font-family: 'Sofia Sans Semi Condensed', sans-serif;
+    display: unset;
+}
+
+.logoImage{
+    width: fit-content;
+    margin: 0px 10px;
+    position: relative;
+    bottom: 10px;
+    color: #E7E6F7;
+}
+
+.Header{
+    display: flex;
+    height: 50px;
+    margin: 0;
+    padding: 10px;
+    font-weight: 800;
+
+    justify-content: space-around;
+    background-color: #85004C;
+    color: white;
+    
+}
+
+
+
+
+.formSearch{
+    --padding: 14px;
+
+    width: max-content;
+    display: flex;
+    align-items: center;
+    padding: var(--padding);
+    border-radius: 28px;
+    background: #8a1458;
+    transition: background-color 0.5s;
+}
+
+.formSearch:hover{
+    background-color: #a21567;
+}
+
+.searchfield{
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #ffffff;
+    margin-left: var(--padding);
+    width: 30vw;
+}
+
+.searchfield::placeholder{
+    color: #ffffff;
+}
+
+input {
+    font-family: 'Sofia Sans Semi Condensed', sans-serif;
+    font-size: 1rem;
+    outline: none;
+}
+
+input[type="search"]{
+    appearance: none;
+}
+
+
+.aboutUsPara{
+    font-family: 'Sofia Sans Semi Condensed', sans-serif;
+    font-size: 1.5rem;
+    margin: 1rem;
+}
+
+.Navbar{
+    color: white;
+    padding: 0px 10px;
+    display: flex;
+    justify-content: left;
+    background-color: #85004C;
+    box-shadow: 0px 3px rgba(0, 0, 0, 0.75);
+    position: sticky;
+    top: 0px;
+}
+
+
+.Logo{
+    flex-grow: 10;
+    flex-basis: 150px;
+    min-width: 110px;
+    font-size: 2.2rem;
+    padding: 2px 0px 0px 10px;
+}
+
+.Home{
+    padding: 5px 20px;
+    font-size: 1.5vw;
+}
+
+.AboutUs{
+    padding: 5px 20px;
+    font-size: 1.5vw;
+}
+
+.Contacts{
+    padding: 5px 20px;
+    font-size: 1.5vw;
+}
+
+.Competitions{
+    padding: 5px 20px;
+    font-size: 1.5vw;
+}
+
+.Special{
+    padding: 5px 20px;
+    font-size: 1.5vw;
+}
+
+/*Article Image*/
+.articleImageContainer{
+    position: relative;
+    z-index: 0;
+}
+
+.articleImageContainer:hover .articleImageOverlay {
+    height: 100%;
+  }
+
+.articleTopImage{
+    width: 100%;
+    filter: brightness(0.7);
+    object-fit: cover;
+    display: block;
+}
+
+.articleImageOverlay{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgb(133 0 76 / 39%);
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    transition: .5s ease;
+}
+
+.articleImageTitleOverlay{
+    white-space: nowrap; 
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    overflow: hidden;
+    top: 50%;
+    left: 50%;
+    font-family: 'Sofia Sans Semi Condensed', sans-serif;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+
+
+
+
+
+
+.Article-Type{
+    color: green;
+    font-size: 20px;
+    font-family: 'Sofia Sans Semi Condensed', sans-serif;
+    font-weight: bold;
+}
+
+.Article-Title{
+    font-size: 2vw;
+    font-weight: bold;
+}
+
+/*Articles*/
+.Article-1{
+    grid-column: 1 / span 2;
+    grid-row: 1 / span 2;
+    display: flex;
+    flex-direction: row-reverse;
+    border: solid black;
+    border-top: double;
+    border-width: 3.3px 0px 1.3px 0px;
+    min-height: 200px;
+    min-width: 400px;
+    padding: 5px;
+}
+
+.Article-1-Explanation{
+    font-size: 1.8vw;
+    width: 90vw;
+}
+
+.Article-1-Image{
+    overflow: hidden; 
+    min-width: 50%; 
+    width: 100%;
+    object-fit: cover;
+    padding: 10px;
+}
+
+.Article-2{
+    grid-column: 1;
+    grid-row: 3;
+    border: solid black;
+    border-width: 0px 0px 1.3px 0px;
+    font-size: 1.8vw;
+    
+}
+
+.Article-3{
+    grid-column: 2;
+    grid-row: 3;
+    border: solid black;
+    border-width: 0px 0px 1.3px 0px;
+    font-size: 1.8vw;
+}
+
+/*Trending Sidebar*/
+.Sidebar{
+    grid-column: 3;
+    grid-row: 1 / span 4;
+    padding: 10px;
+    border: solid black;
+    border-width: 0px 0px 0px 1.3px;
+}
+
+.trendingArticles{
+    border: solid black;
+    border-width: 0px 0px 1.3px 0px;
+    padding: 10px 0px 10px 0px;
+    font-size: 13px;
+    min-height: 100px;
+}
+
+.sideArticleType{
+    font-size: 13px;
+    color:green;
+}
+
+.sideArticleAuthor{
+    font-size: 12px;
+    color:rgb(144, 144, 144)
+}
+
+.sideArticleTitle{
+    font-size: 16px;
+}
+
+.sideArticleDate{
+    font-size: 8px;
+    color:rgb(144, 144, 144)
+}
+
+/*Footer CSS*/
+
+footer{
+    background-color: #85004C;
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1fr;
+    padding: 15px 0px 50px 0px;
+    margin-top: 20px;
+}
+
+.Footer-Motto{
+    font-family: 'Sofia Sans Semi Condensed', sans-serif;
+    color: white;
+    font-size: 20px;
+    padding: 10px;
+}
+
+.Footer-Home{
+    font-family: 'Sofia Sans Semi Condensed', sans-serif;
+    color: white;
+}
+.Footer-Contacts{
+    font-family: 'Sofia Sans Semi Condensed', sans-serif;
+    color: white;
+}
+.Footer-About{
+    font-family: 'Sofia Sans Semi Condensed', sans-serif;
+    color: white;
+}
+.Footer-Special{
+    font-family: 'Sofia Sans Semi Condensed', sans-serif;
+    color: white;
+}
+
+.Footer-Home:hover{
+    color: rgb(124, 124, 124);
+}
+.Footer-Contacts:hover{
+    color: rgb(124, 124, 124);
+}
+.Footer-About:hover{
+    color: rgb(124, 124, 124);
+}
+.Footer-Special:hover{
+    color: rgb(124, 124, 124);
+}
+
+.Useful-Links{
+    display: flex;
+    flex-direction: column;
+
+    padding: 10px;
+    font-family: 'Sofia Sans Semi Condensed', sans-serif;
+    color: rgb(255, 255, 255);
+
+}
+
+
+/*Article Inside*/
+.article{
+    font-family: 'Sofia Sans Semi Condensed', sans-serif;
+    margin: 10px;
+    display: grid;
+    grid-template-columns: 4fr 15px 1fr;
+}
+
+.articleSummaries{
+    font-size: 1ex;
+    margin: 0px 10px 0px 0px;
+}
+
+
+
+/*Search Page Styling*/
+.searchResultDiv{
+    font-family: 'Sofia Sans Semi Condensed', sans-serif;
+    margin: 10px;
+    display: grid;
+}
+
+p{
+    font-family: 'Sofia Sans Semi Condensed', sans-serif;
+    margin: 30px 0px 5px 30px;
+}
+
+.searchResultLink{
+    color: black;
+    font-size: 15px;
+    margin-bottom: -10px;
+}
+
+.searchResultInfo{
+    color: rgb(92, 92, 92);
+}
+
+
+
+
+
+/*Article Styling*/
+
+.articleDiv{
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: 75% 50%;
+    font-family: 'Sofia Sans Semi Condensed', sans-serif;
+    
+}
+
+.articleCardTitle{
+    border: solid black;
+    border-top: double;
+    border-width: 5px 0px 0px 0px;
+    display: grid;
+    grid-column: 1;
+    justify-content: center;
+    margin: 25px;
+}
+
+.articleContent{
+    grid-column: 1;
+    margin: 5px 25px;
+    font-size: 1rem;
+    text-indent: 30px;
+    line-height: 30px;
+}
+
+
+
+.contactPage{
+    margin: 1rem;
+    font-family: 'Sofia Sans Semi Condensed', sans-serif;
+}
+
+
+
+.mainScreen{
+    min-height: 100vh;
+}
+
+.mainScreenTrending{
+    font-family: "IBM Plex Serif", sans-serif;
+    margin: 10px;
+    width: 75%;
+}
+
+/*Trending Page*/
+.trendingArticleContainer{
+    margin-bottom: 5px;
+    border: solid black;
+    border-width: 0px 0px 1.3px 0px;
+    padding: 3px 0px 3px 3px;
+    min-height: 200px;
+    display: grid;
+    grid-template-columns: 2fr 190px;
+    gap: 10px;
+}
+
+.trendingArticleImage{
+    width: 190px;
+    height: 190px;
+    object-fit: cover;
+}
+
+.trendingArticleAuthor{
+    font-size: 14px;
+    color:rgb(144, 144, 144)
+}
+
+.trendingArticleTitle{
+    font-size: 18px;
+}
+
+.trendingArticleDate{
+    font-size: 10px;
+    color:rgb(144, 144, 144)
+}
+
+
+/*Responsive Design*/
+@media only screen and (max-width: 600px){
+
+    .Header{
+        display: flex;
+        height: 25px;
+        margin: 0;
+        padding: 10px;
+        font-weight: 800;
+    
+        justify-content: space-around;
+        background-color: #85004C;
+        color: white;
+        
+    }
+
+    .Logo{
+        flex-basis: 110px;
+        min-width: 110px;
+        font-size: 1.24rem;
+        align-self: center;
+    }
+
+
+    .formSearch{
+        --padding: 3px;
+    
+        width: max-content;
+        display: flex;
+        align-items: center;
+        padding: var(--padding);
+        border-radius: 28px;
+        background: #8a1458;
+    }
+    
+    .searchfield{
+        background: transparent;
+        border: none;
+        outline: none;
+        color: #ffffff;
+        margin-left: var(--padding);
+        width: 15vw;
+        font-size: 3vw;
+    }
+
+    .searchIcon{
+        scale: 0.5;
+    }
+
+    .logoImage{
+        width: 25px;
+        height: 25px;
+        margin: 0px 10px;
+        position: relative;
+        bottom: 3px;
+        color: #E7E6F7;
+    }
+
+    .Navbar{
+        color: white;
+        padding: 0px 10px;
+        display: flex;
+        justify-content: left;
+        background-color: #85004C;
+        box-shadow: 0px 3px rgba(0, 0, 0, 0.75);
+        position: sticky;
+        top: 0px;
+        height: 30px;
+        overflow-x: scroll;
+    }
+
+    .Home{
+        padding: 5px 20px;
+        font-size: 4vw;
+    }
+    
+    .AboutUs{
+        padding: 5px 20px;
+        font-size: 4vw;
+    }
+
+    .aboutUsClass{
+        display: block;
+        width: 14.7vw;
+    }
+    
+    .Contacts{
+        padding: 5px 20px;
+        font-size: 4vw;
+    }
+    
+    .Competitions{
+        padding: 5px 20px;
+        font-size: 4vw;
+    }
+    
+    .Special{
+        padding: 5px 20px;
+        font-size: 4vw;
+    }
+
+
+
+
+
+
+    main{
+        height: auto;
+        margin: 20px 10px 10px 10px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+        gap: 12px;
+        width: auto;
+        font-family: "IBM Plex Serif", sans-serif;
+    }
+
+    .Article-Type{
+        color: green;
+        font-size: 3vw;
+        font-family: 'Sofia Sans Semi Condensed', sans-serif;
+        font-weight: bold;
+    }
+    
+    .Article-Title{
+        font-size: 5vw;
+        font-weight: 500;
+    }
+
+    .articleSummaries{
+        display: none;
+    }
+    
+    .articleDiv{
+        grid-template-columns: 100%; 
+    }
+
+    /*Articles*/
+    .Article-1{
+        grid-column: 1 / span 2;
+        grid-row: 1 / span 2;
+        display: flex;
+        flex-direction: column-reverse;
+        border: solid black;
+        border-top: double;
+        border-width: 5px 0px 1.5px 0px;
+        min-height: 200px;
+        min-width: auto;
+        padding: 5px;
+    }
+    
+    .Article-1-Explanation{
+        font-size: 3vw;
+        width: 90vw;
+        min-width: auto;
+    }
+    
+    .Article-1-Image{
+        width: auto;
+    }
+    
+    .Article-2{
+        grid-column: 1 / span 2;
+        grid-row: 3 / span 2;
+        border: solid black;
+        border-width: 0px 0px 1.5px 0px;
+        font-size: 3vw;
+    }
+    
+    .Article-3{
+        grid-column: 1 / span 2;
+        grid-row: 5 / span 2;
+        border: solid black;
+        border-width: 0px 0px 1.5px 0px;
+        font-size: 3vw;
+    }
+    
+    /*Sidebar Media Query*/
+    .Sidebar{
+        grid-column: 3;
+        grid-row: 1 / span 6;
+        padding: 10px;
+        border: solid black;
+        border-width: 0px 0px 0px 1.5px;
+        display: none;
+    }
+
+    .trendingArticles{
+        border: solid black;
+        border-width: 0px 0px 1.5px 0px;
+        padding: 10px 0px 10px 0px;
+        font-size: 2vw;
+    }
+
+
+
+
+    /*Footer*/
+    .Useful-Links{
+        display: flex;
+        flex-direction: column;
+    
+        padding: 10px;
+        font-family: 'Sofia Sans Semi Condensed', sans-serif;
+        color: rgb(255, 255, 255);
+        font-size: 3vw;
+    }
+
+
+    /*Trending Articles*/
+    .trendingArticleImage{
+        display: none;
+    }
+
+
+    .trendingArticleContainer{
+        margin-bottom: 5px;
+        border: solid black;
+        border-width: 0px 0px 1.3px 0px;
+        padding: 3px 0px 3px 3px;
+        min-height: 200px;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .mainScreenTrending{
+        font-family: "IBM Plex Serif", sans-serif;
+        margin: 10px;
+        width: auto;
+    }
+}
+
+
+
+
+
+
