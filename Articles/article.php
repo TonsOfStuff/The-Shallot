@@ -98,6 +98,13 @@ if ($articleId) {
     </div>
     
     <footer>
-        
+        <div class = "Footer-Motto"><b>The Shallot</b> loves providing engaging and entertaining stories to you and many others</div>
+        <div class = "Useful-Links">
+            <b>Useful Links:</b>
+            <a href = "../index.php"><div class = "Footer-Home">Home</div></a>
+            <a href = "../contacts.html"><div class = "Footer-Contacts">Contact</div></a>
+            <a href = "../aboutUs.html"><div class = "Footer-About">About Us</div></a>
+            <a href = "../special.php"><div class = "Footer-Special">Special Articles</div></a>
+        </div> 
     </footer>
 </html>
