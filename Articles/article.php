@@ -72,9 +72,12 @@ if ($articleId) {
             <div class = "Special"><a href = "#" id = "specialID" style = "color: white;">Special</a></div>
             <script src='../script.js'></script>
         </nav>
+        <div id = "scrollBar"></div>
+        <script src = "scrollBar.js"></script>
     </header>
 
     <div class = "mainScreen">
+        
         <?php if ($article) : ?>
             <?php if ($article["articleImage1"]): ?>
                 <div class = "articleImageContainer">
