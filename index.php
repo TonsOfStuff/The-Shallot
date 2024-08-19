@@ -93,7 +93,11 @@
 
         <!--1st Article-->
         <div class = "Article-1">
-            <img src = "images/<?=$rows[0]["articleImage1"]?>" class = "Article-1-Image" alt = "Image1">
+            <?php if ($rows[0]["articleImage1"] != null) : ?>
+                <img src = "images/<?=$rows[0]["articleImage1"]?>" class = "Article-1-Image" alt = "Image1">
+            <?php else : ?>
+                <img src = "test-image for Shallot.jpg" class = "Article-1-Image" alt = "Image1">
+            <?php endif; ?>
         
             <div class = "Article-1-Explanation">
                 <!--Article Type-->

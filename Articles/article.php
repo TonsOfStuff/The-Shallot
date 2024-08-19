@@ -50,6 +50,8 @@ if ($articleId) {
         <link href="https://fonts.googleapis.com/css2?family=Sofia+Sans+Semi+Condensed:wght@200&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@100;300&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+        <script defer src = "innerHTML.js"></script>
     </head>
 
     <header style = "position:relative; z-index:1">
@@ -73,7 +75,7 @@ if ($articleId) {
             <script src='../script.js'></script>
         </nav>
         <div id = "scrollBar"></div>
-        <script src = "scrollBar.js"></script>
+        
     </header>
 
     <div class = "mainScreen">
