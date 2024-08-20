@@ -11,10 +11,33 @@ try {
     echo "Connection Failed:" . $e->getMessage();
 };*/
 
-$host = "localhost";
-$user = "root";
-$password = "jerryton123";
-$database = "shallotdb";
+function loadEnv($path) {
+    if (!file_exists($path)) {
+        die("Error: .env file not found.");
+    }
+
+    $lines = file($path, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
+    foreach ($lines as $line) {
+        if (strpos(trim($line), '#') === 0) {
+            continue; // Skip comments
+        }
+
+        list($name, $value) = explode('=', $line, 2);
+        $name = trim($name);
+        $value = trim($value);
+
+        if (!array_key_exists($name, $_ENV)) {
+            $_ENV[$name] = $value;
+        }
+    }
+}
+
+loadEnv(__DIR__ . '/../.env');
+
+$host = $_ENV['DB_HOST'] ?? 'localhost';
+$user = $_ENV['DB_USER'] ?? 'root';
+$password = $_ENV['DB_PASSWORD'] ?? '';
+$database = $_ENV['DB_DATABASE'] ?? '';
 
 // Create a database connection
 $db = new mysqli($host, $user, $password, $database);
